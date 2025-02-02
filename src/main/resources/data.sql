@@ -1,7 +1,22 @@
-
-insert into test.product_table (price,quantity,sku,title_x)
-values
-(12.4, 4,'parle734', 'parle'),
-(15.4, 1, 'pepsi123','pepsi'),
-(34.4, 10, 'coke124','coca cola'),
-(16.49, 3,'pepsi156','Mazza');
+INSERT INTO test.product_table (price, quantity, sku, title_x)
+VALUES
+(12.4, 4, 'parle734', 'parle'),
+(15.4, 1, 'pepsi123', 'pepsi'),
+(34.4, 10, 'coke124', 'coca cola'),
+(16.49, 3, 'pepsi156', 'Mazza'),
+(20.5, 6, 'snack123', 'Lays'),
+(25.0, 5, 'chips456', 'Doritos'),
+(18.3, 2, 'drink789', 'Sprite'),
+(22.1, 8, 'water999', 'Aquafina'),
+(10.99, 4, 'candy876', 'Snickers'),
+(30.0, 12, 'cola345', 'Coca-Cola'),
+(17.2, 7, 'beverage567', 'Pepsi'),
+(27.3, 6, 'soda345', 'Fanta'),
+(14.8, 3, 'chips123', 'Pringles'),
+(19.99, 9, 'drink111', '7Up'),
+(11.5, 4, 'snack234', 'Kurkure'),
+(16.0, 8, 'candy101', 'Mars'),
+(23.4, 6, 'drink222', 'Mountain Dew'),
+(12.2, 5, 'chips789', 'Lays'),
+(28.3, 3, 'soda654', 'Pepsi Max'),
+(29.9, 10, 'water123', 'Nestlé');
