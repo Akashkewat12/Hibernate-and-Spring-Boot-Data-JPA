@@ -40,7 +40,7 @@ class JdbcJpaTutorialApplicationTests {
 //		List<ProductEntity> entities=productRepository.findByQuantityGreaterThanAndPriceLessThan(4, BigDecimal.valueOf(23.45));
 
 //		List<ProductEntity> entities=productRepository.findByTitleLike("%cho%");
-		List<ProductEntity> entities=productRepository.findByTitleContainingIgnoreCase("choco");
+		List<ProductEntity> entities=productRepository.findByTitleContainingIgnoreCase("choco", null);
 		System.out.println(entities);
 	}
 

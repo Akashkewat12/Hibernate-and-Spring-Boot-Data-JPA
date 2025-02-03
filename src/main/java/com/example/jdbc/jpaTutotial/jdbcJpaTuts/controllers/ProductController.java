@@ -27,19 +27,28 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<ProductEntity> getAllProducts(@RequestParam(defaultValue = "id") String sortBy,
-    @RequestParam(defaultValue = "0") Integer pagenumber) {
-//        return productRepository.findBy(Sort.by(Sort.Direction.DESC, sortBy,"price","quantity"));
+    public List<ProductEntity> getAllProducts(
+            @RequestParam(defaultValue = "") String title,
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "0") Integer pagenumber) {
+
+
+        return productRepository.findByTitleContainingIgnoreCase(title,
+                PageRequest.of(pagenumber, PAGE_SIZE, Sort.by(sortBy)
+                ));
+    }
+        //        return productRepository.findBy(Sort.by(Sort.Direction.DESC, sortBy,"price","quantity"));
 //    return productRepository.findBy(Sort.by(
 //            Sort.Order.desc(sortBy),
 //            Sort.Order.desc("title")  // we can add more sorting field
 //
-        Pageable pageable= PageRequest.of(
-                pagenumber,
-                PAGE_SIZE,
-                Sort.by(sortBy)
-        );
-        return productRepository.findAll(pageable).getContent();
-    }
+
+//        Pageable pageable= PageRequest.of(
+//                pagenumber,
+//                PAGE_SIZE,
+//                Sort.by(sortBy)
+//        );
+//        return productRepository.findAll(pageable).getContent();
+
 
 }
