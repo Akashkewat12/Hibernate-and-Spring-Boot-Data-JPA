@@ -49,6 +49,6 @@ class JdbcJpaTutorialApplicationTests {
 		Optional<ProductEntity> productEntity=productRepository
 				.findByTitleAndPrice("Nestle chocolate",BigDecimal.valueOf(23.45));
 		productEntity.ifPresent(System.out::println);
-
+		System.out.println("hello");
 	}
 }
