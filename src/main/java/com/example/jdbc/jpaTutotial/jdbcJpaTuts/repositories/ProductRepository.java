@@ -29,5 +29,6 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
 //    here we are using our custom method
     @Query("select e from ProductEntity e where e.title=?1 and e.price=?2")
     Optional<ProductEntity> findByTitleAndPrice(String title, BigDecimal price);
+    System.out.println();
 
 }

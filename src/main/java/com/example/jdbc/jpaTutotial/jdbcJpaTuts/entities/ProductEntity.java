@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
